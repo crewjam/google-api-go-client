@@ -3419,7 +3419,7 @@ func (s *TrustedApps) MarshalJSON() ([]byte, error) {
 
 // User: JSON template for User object in Directory API.
 type User struct {
-	Addresses interface{} `json:"addresses,omitempty"`
+	Addresses []*UserAddress `json:"addresses,omitempty"`
 
 	// AgreedToTerms: Indicates if user has agreed to terms (Read-only)
 	AgreedToTerms bool `json:"agreedToTerms,omitempty"`
@@ -3445,14 +3445,14 @@ type User struct {
 
 	DeletionTime string `json:"deletionTime,omitempty"`
 
-	Emails interface{} `json:"emails,omitempty"`
+	Emails []*UserEmail `json:"emails,omitempty"`
 
 	// Etag: ETag of the resource.
 	Etag string `json:"etag,omitempty"`
 
-	ExternalIds interface{} `json:"externalIds,omitempty"`
+	ExternalIds []*UserExternalId `json:"externalIds,omitempty"`
 
-	Gender interface{} `json:"gender,omitempty"`
+	Gender *UserGender `json:"gender,omitempty"`
 
 	// HashFunction: Hash function name for password. Supported are MD5,
 	// SHA-1 and crypt
@@ -3461,7 +3461,7 @@ type User struct {
 	// Id: Unique identifier of User (Read-only)
 	Id string `json:"id,omitempty"`
 
-	Ims interface{} `json:"ims,omitempty"`
+	Ims []*UserIm `json:"ims,omitempty"`
 
 	// IncludeInGlobalAddressList: Boolean indicating if user is included in
 	// Global Address List
@@ -3486,17 +3486,17 @@ type User struct {
 	// IsMailboxSetup: Is mailbox setup (Read-only)
 	IsMailboxSetup bool `json:"isMailboxSetup,omitempty"`
 
-	Keywords interface{} `json:"keywords,omitempty"`
+	Keywords []*UserKeyword `json:"keywords,omitempty"`
 
 	// Kind: Kind of resource this is.
 	Kind string `json:"kind,omitempty"`
 
-	Languages interface{} `json:"languages,omitempty"`
+	Languages []*UserLanguage `json:"languages,omitempty"`
 
 	// LastLoginTime: User's last login time. (Read-only)
 	LastLoginTime string `json:"lastLoginTime,omitempty"`
 
-	Locations interface{} `json:"locations,omitempty"`
+	Locations []*UserLocation `json:"locations,omitempty"`
 
 	// Name: User's name
 	Name *UserName `json:"name,omitempty"`
@@ -3504,26 +3504,26 @@ type User struct {
 	// NonEditableAliases: List of non editable aliases (Read-only)
 	NonEditableAliases []string `json:"nonEditableAliases,omitempty"`
 
-	Notes interface{} `json:"notes,omitempty"`
+	Notes string `json:"notes,omitempty"`
 
 	// OrgUnitPath: OrgUnit of User
 	OrgUnitPath string `json:"orgUnitPath,omitempty"`
 
-	Organizations interface{} `json:"organizations,omitempty"`
+	Organizations []*UserOrganization `json:"organizations,omitempty"`
 
 	// Password: User's password
 	Password string `json:"password,omitempty"`
 
-	Phones interface{} `json:"phones,omitempty"`
+	Phones []*UserPhone `json:"phones,omitempty"`
 
-	PosixAccounts interface{} `json:"posixAccounts,omitempty"`
+	PosixAccounts []*UserPosixAccount `json:"posixAccounts,omitempty"`
 
 	// PrimaryEmail: username of User
 	PrimaryEmail string `json:"primaryEmail,omitempty"`
 
-	Relations interface{} `json:"relations,omitempty"`
+	Relations []*UserRelation `json:"relations,omitempty"`
 
-	SshPublicKeys interface{} `json:"sshPublicKeys,omitempty"`
+	SshPublicKeys []*UserSshPublicKey `json:"sshPublicKeys,omitempty"`
 
 	// Suspended: Indicates if user is suspended.
 	Suspended bool `json:"suspended,omitempty"`
@@ -3537,7 +3537,7 @@ type User struct {
 	// ThumbnailPhotoUrl: Photo Url of the user (Read-only)
 	ThumbnailPhotoUrl string `json:"thumbnailPhotoUrl,omitempty"`
 
-	Websites interface{} `json:"websites,omitempty"`
+	Websites []*UserWebsite `json:"websites,omitempty"`
 
 	// ServerResponse contains the HTTP response code and headers from the
 	// server.

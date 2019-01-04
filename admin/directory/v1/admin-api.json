@@ -6084,7 +6084,10 @@
       "id": "User",
       "properties": {
         "addresses": {
-          "type": "any"
+          "items": {
+            "$ref": "UserAddress"
+          },
+          "type": "array"
         },
         "agreedToTerms": {
           "description": "Indicates if user has agreed to terms (Read-only)",
@@ -6131,7 +6134,10 @@
           "type": "string"
         },
         "emails": {
-          "type": "any"
+          "items": {
+            "$ref": "UserEmail"
+          },
+          "type": "array"
         },
         "etag": {
           "description": "ETag of the resource.",
@@ -6139,10 +6145,13 @@
           "type": "string"
         },
         "externalIds": {
-          "type": "any"
+          "items": {
+            "$ref": "UserExternalId"
+          },
+          "type": "array"
         },
         "gender": {
-          "type": "any"
+          "$ref": "UserGender"
         },
         "hashFunction": {
           "description": "Hash function name for password. Supported are MD5, SHA-1 and crypt",
@@ -6153,7 +6162,10 @@
           "type": "string"
         },
         "ims": {
-          "type": "any"
+          "items": {
+            "$ref": "UserIm"
+          },
+          "type": "array"
         },
         "includeInGlobalAddressList": {
           "description": "Boolean indicating if user is included in Global Address List",
@@ -6189,7 +6201,10 @@
           "type": "boolean"
         },
         "keywords": {
-          "type": "any"
+          "items": {
+            "$ref": "UserKeyword"
+          },
+          "type": "array"
         },
         "kind": {
           "default": "admin#directory#user",
@@ -6198,7 +6213,10 @@
           "type": "string"
         },
         "languages": {
-          "type": "any"
+          "items": {
+            "$ref": "UserLanguage"
+          },
+          "type": "array"
         },
         "lastLoginTime": {
           "description": "User's last login time. (Read-only)",
@@ -6207,7 +6225,10 @@
           "type": "string"
         },
         "locations": {
-          "type": "any"
+          "items": {
+            "$ref": "UserLocation"
+          },
+          "type": "array"
         },
         "name": {
           "$ref": "UserName",
@@ -6227,14 +6248,17 @@
           "type": "array"
         },
         "notes": {
-          "type": "any"
+          "type": "string"
         },
         "orgUnitPath": {
           "description": "OrgUnit of User",
           "type": "string"
         },
         "organizations": {
-          "type": "any"
+          "items": {
+            "$ref": "UserOrganization"
+          },
+          "type": "array"
         },
         "password": {
           "annotations": {
@@ -6246,10 +6270,16 @@
           "type": "string"
         },
         "phones": {
-          "type": "any"
+          "items": {
+            "$ref": "UserPhone"
+          },
+          "type": "array"
         },
         "posixAccounts": {
-          "type": "any"
+          "items": {
+            "$ref": "UserPosixAccount"
+          },
+          "type": "array"
         },
         "primaryEmail": {
           "annotations": {
@@ -6261,10 +6291,16 @@
           "type": "string"
         },
         "relations": {
-          "type": "any"
+          "items": {
+            "$ref": "UserRelation"
+          },
+          "type": "array"
         },
         "sshPublicKeys": {
-          "type": "any"
+          "items": {
+            "$ref": "UserSshPublicKey"
+          },
+          "type": "array"
         },
         "suspended": {
           "description": "Indicates if user is suspended.",
@@ -6286,7 +6322,10 @@
           "type": "string"
         },
         "websites": {
-          "type": "any"
+          "items": {
+            "$ref": "UserWebsite"
+          },
+          "type": "array"
         }
       },
       "type": "object"
